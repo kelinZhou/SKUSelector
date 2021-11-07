@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:paddingStart="20dp"
+    android:paddingTop="40dp"
+    android:paddingEnd="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCommodityImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/car1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCommodityName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:singleLine="true"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/ivCommodityImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCommodityImage"
+        app:layout_constraintBottom_toTopOf="@id/tvPrice"
+        tools:text="PAI D1智能超长续航锂电池电动车" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/ivCommodityImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCommodityName"
+        app:layout_constraintBottom_toBottomOf="@id/ivCommodityImage"
+        tools:text="￥3999" />
+
+    <LinearLayout
+        android:id="@+id/llSpecsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCommodityImage"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
